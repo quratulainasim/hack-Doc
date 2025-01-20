@@ -1,0 +1,57 @@
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
+
+function Header() {
+ 
+    return (
+      <>
+    
+    <div className="max-w-[1440px] h-[60px] bg-slate-200 mx-auto flex items-center justify-evenly px-6 md:px-8 lg:px-16">
+
+  <div className="flex items-center space-x-4">
+    <div className="w-[40px] h-[40px] flex-shrink-0">
+      <Image
+        src="/h3.png"
+        alt="logo"
+        width={40}
+        height={40}
+        className="w-full h-auto"
+      />
+    </div>
+    <h1 className="text-sm md:text-lg lg:text-2xl font-bold text-black">
+      NIKE SHOES
+    </h1>
+  </div>
+
+
+  <div className="hidden md:flex items-center space-x-1 md:space-x-2 text-sm md:text-md lg:text-lg font-medium text-[#111111]">
+    <Link href="/" className="hover:underline">
+      Home
+    </Link>
+    <span>|</span>
+    <Link href="../product" className="hover:underline">
+      Products
+    </Link>
+    <span>|</span>
+    <Link href="../joinus" className="hover:underline">
+      Join Us
+    </Link>
+    <span>|</span>
+    <Link href="../signin" className="hover:underline">
+      Sign In
+    </Link>
+  </div>
+  <div className=" mr-9">
+    <Link href="../cart" className="relative block">
+      <Image src="/cart.png" alt="cart icon" width={20} height={20} />
+    </Link>
+    
+  </div>
+</div>
+</>
+
+);
+}
+export default Header;
